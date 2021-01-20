@@ -52,9 +52,6 @@ def main():
         bearingOfTarget = input('Pls input a valid number: ')
     '''
     
-    
-    
-    
     x0 = 0
     y0 = 0
     velocity = 10 #m/s
