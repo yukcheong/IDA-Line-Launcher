@@ -52,8 +52,8 @@ class Projectile:
         self.y = self.y + 0.5*(self.vy + self.updateVy(dt))*dt
         return self.y
     
+    # append the coordinates of the projitile at t = dt into lists
     def step(self, dt):
-        # append the coordinates of the projitile at t = dt into lists
         self.xarr.append(self.updateX(dt))
         self.yarr.append(self.updateY(dt))
         self.time = self.time + dt
