@@ -4,7 +4,7 @@ class Projectile:
     
     def __init__(self, x0, y0, v0, angle):
         '''
-        x0 and y0 are initial coordinates of the cannon
+        x0 and y0 are initial coordinates 
         v0 is the initial velocity
         angle is the angle of shooting in degrees
         '''
@@ -15,7 +15,7 @@ class Projectile:
         # Friction factor
         self.friction = 0.5 # N/(m/s)
         
-        # current x and y coordinates of the ball
+        # current x and y coordinates of the projectile
         self.x    = x0
         self.y    = y0
         # current value of velocity components
@@ -26,13 +26,12 @@ class Projectile:
         self.ax   = 0
         self.ay   = -9.81 #m/s^2
         
-        # these list will contain discrete set of ball coordinates
+        # these list will contain discrete set of projectile's coordinates
         self.xarr = [self.x]
         self.yarr = [self.y]
     
-    '''
-    v = u + at
-    '''    
+    
+    # v = u + at  
     def updateVx(self, dt):
         self.vx = self.vx + self.ax*dt
         return self.vx
@@ -41,9 +40,7 @@ class Projectile:
         self.vy = self.vy + self.ay*dt
         return self.vy
     
-    '''
-    s = 0.5(u + v)t
-    '''
+    #s = 0.5(u + v)t
     def updateX(self, dt):
         self.x = self.x + 0.5*(self.vx + self.updateVx(dt))*dt
         return self.x
