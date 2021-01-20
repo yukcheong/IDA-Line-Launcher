@@ -16,15 +16,13 @@ def checkNum(varname):
 def f(x):
     return ax**2 + b**x + c
 
+#Returns a tuple with sequential pairs of x and y coordinates
 def makeShoot(x0, y0, velocity, angle):
-    """
-    Returns a tuple with sequential pairs of x and y coordinates
-    """
     ball = Projectile(x0, y0, velocity, angle)
     dt = 0.05 # time step
     t = 0 # initial time
     ball.step(dt)
-
+    
     while ball.y >= 0:
         ball.step(dt)
         t = t + dt
@@ -34,14 +32,15 @@ def makeShoot(x0, y0, velocity, angle):
 def main():
     
     #######Bunch of CONSTANTs########
-    
     # Number of springs in parallel
     Np = 2
     
     # Spring constant
     k = Np*1000 # N/m
-    
     ################################
+    
+        
+    #######Taking inputs########
     '''
     targetDistance = input("Target liner distance: ")
     while checkNum(targetDistance) == False :
@@ -51,11 +50,11 @@ def main():
     while checkNum(bearingOfTarget) == False :
         bearingOfTarget = input('Pls input a valid number: ')
     '''
+    ################################
     
     x0 = 0
     y0 = 0
     velocity = 10 #m/s
-    print makeShoot(x0, y0, velocity, 45)
     x, y = makeShoot(x0, y0, velocity, 45)
     plt.plot(x,y)
     plt.xlabel('X coordinate (m)')
