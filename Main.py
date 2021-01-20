@@ -13,6 +13,7 @@ def checkNum(varname):
     except ValueError:
         return False
 
+
 def f(x):
     return ax**2 + b**x + c
 
