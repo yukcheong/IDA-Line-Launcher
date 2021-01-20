@@ -35,8 +35,11 @@ def main():
     
     #######Bunch of CONSTANTs########
     
+    # Number of springs in parallel
+    Np = 2
+    
     # Spring constant
-    k = 1000 # N/m
+    k = Np*1000 # N/m
     
     ################################
     '''
