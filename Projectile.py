@@ -9,8 +9,8 @@ class Projectile:
         angle is the angle of shooting in degrees
         '''
         #CONSTANTS
-        self.time = 0
-        self.mass = 0.050
+        self.time = 0 #s
+        self.mass = 0.050 #kg
         
         # Friction factor
         self.friction = 0.5 # N/(m/s)
@@ -24,7 +24,7 @@ class Projectile:
 
         # acceleration by x and y axes
         self.ax   = 0
-        self.ay   = -9.81
+        self.ay   = -9.81 #m/s^2
         
         # these list will contain discrete set of ball coordinates
         self.xarr = [self.x]
