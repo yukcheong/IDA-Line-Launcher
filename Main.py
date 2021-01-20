@@ -36,7 +36,7 @@ def main():
     #######Bunch of CONSTANTs########
     
     # Spring constant
-    k = 1000/Ns*Np # N/m
+    k = 1000 # N/m
     
     ################################
     '''
@@ -56,13 +56,8 @@ def main():
     y0 = 0
     velocity = 10
     print makeShoot(x0, y0, velocity, 45)
-    x45, y45 = makeShoot(x0, y0, velocity, 45)
-    x30, y30 = makeShoot(x0, y0, velocity, 30)
-    x60, y60 = makeShoot(x0, y0, velocity, 60)
-    plt.plot(x45, y45, 'bo-', x30, y30, 'ro-', x60, y60, 'ko-',
-        [0, 12], [0, 0], 'k-' # ground
-        )
-    plt.legend(['45 deg shoot', '30 deg shoot', '60 deg shoot'])
+    x, y = makeShoot(x0, y0, velocity, 45)
+    plt.plot(x,y)
     plt.xlabel('X coordinate (m)')
     plt.ylabel('Y coordinate (m)')
     plt.show()
