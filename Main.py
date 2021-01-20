@@ -57,7 +57,7 @@ def main():
     
     x0 = 0
     y0 = 0
-    velocity = 10
+    velocity = 10 #m/s
     print makeShoot(x0, y0, velocity, 45)
     x, y = makeShoot(x0, y0, velocity, 45)
     plt.plot(x,y)
